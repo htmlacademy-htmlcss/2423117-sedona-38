@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [natali_ 25259](https://up.htmlacademy.ru/htmlcss/38/user/2423117).
-* Наставник: `Неизвестно`.
+* Наставник: `Ольга :) Тюлихова(https://htmlacademy.ru/profile/id523263)`.
 
 ---
 
