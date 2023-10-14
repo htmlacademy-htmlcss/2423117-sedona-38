@@ -26,6 +26,7 @@ body {
   background-color: #ffffff;
   max-width: 1200px;
   margin: 0 auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.20);
 }
 
 /* стилизация страницы */
@@ -56,13 +57,25 @@ body {
   padding: 8px 34px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .main-welcome {
   color: #000000;
   background-color: #83b3d31f;
   background-image: url(../images/border-bottom.svg),
     url(../images/background.jpg);
+  height: 485px;
+  background-position: center bottom;
   background-repeat: no-repeat;
-  background-size: 100% auto;
   text-align: center;
 }
 
@@ -72,15 +85,23 @@ body {
   line-height: 36px;
 }
 
+.main-subtitle{
+  color: #333333;
+}
+
 .adventages-list {
   text-align: center;
 }
 
-.adventages-title {
+.advantages-title {
   /* почему-то не работает в браузере text-transform */
   text-transform: uppercase;
   font-size: 24px;
   line-height: 28px;
+}
+
+.adventages-subtitle{
+  color: #333333;
 }
 
 .dark-blue {
@@ -153,7 +174,11 @@ body {
   background-repeat: no-repeat;
 }
 
-.arrow-image {
+.home-icon::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 10px;
   background-image: url(../images/arrow-icon.svg);
   background-repeat: no-repeat;
 }
@@ -189,6 +214,14 @@ body {
 .row {
   background-image: url(../images/row-icon.svg);
   background-repeat: no-repeat;
+}
+
+.card-subtitle{
+  color: #333333;
+}
+
+.card-rating-subtitle{
+  color: #333333;
 }
 
 .pagination {
