@@ -64,7 +64,7 @@
               </a>
             </li>
             <li class="navigation-item">
-              <a class="button button-brown button-search" href="#"
+              <a class="button button-brown" href="#"
                 >Хочу сюда</a
               >
             </li>
@@ -81,7 +81,7 @@
               <ul class="breadcrumbs">
                 <li class="breadcrumbs-item">
                   <a class="breadcrumbs-link home-icon" href="index.html"
-                    >Главная</a
+                    ><span class="visually-hidden">Главная</span></a
                   >
                 </li>
                 <li class="breadcrumbs-item">
@@ -214,7 +214,8 @@
             <option value="cheap">Сначала дорогие</option>
             <option value="expensive">Сначала популярные</option>
           </select>
-          <a href="#" class="button button-light grid">
+          <div class="button-select">
+          <a href="#" class="button grid">
             <span class="visually-hidden">Показать блоками</span>
           </a>
           <a class="button full-page" href="#">
@@ -223,6 +224,7 @@
           <a class="button row" href="#">
             <span class="visually-hidden">Показать списком</span>
           </a>
+        </div>
         </section>
         <!-- разметка карточек -->
         <section class="catalog-card">
@@ -337,7 +339,7 @@
               <a class="pagination-link" href="#">4</a>
             </li>
             <li class="pagination-item">
-              <span class="pagination-more">...</span>
+              <span class="pagination-link pagination-more">...</span>
             </li>
             <li class="pagination-item">
               <a class="pagination-link" href="#">10</a>
@@ -356,8 +358,8 @@
             method="post"
           >
             <label>
-              <input type="email" placeholder="Ваш e-mail" required />
-              <button class="button button-search dark-blue" type="submit">
+              <input class="color-grey" type="email" placeholder="Ваш e-mail" required />
+              <button class="button dark-blue" type="submit">
                 Подписаться
               </button>
             </label>
