@@ -25,7 +25,7 @@
               <a class="navigation-link" href="#">О седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="#">Гостиницы</a>
+              <a class="navigation-link navigation-link-current" href="#">Гостиницы</a>
             </li>
           </ul>
           <!-- разметка правой части навигации в шапке -->
@@ -83,7 +83,7 @@
                   >
                 </li>
                 <li class="breadcrumbs-item">
-                  <a class="breadcrumbs-link">Гостиницы</a>
+                  <a class="breadcrumbs-link-current">Гостиницы</a>
                 </li>
               </ul>
             </header>
@@ -193,7 +193,7 @@
                       </label>
                     </li>
                   </ul>
-                  <button class="button button-use dark-blue" type="submit">
+                  <button class="button button-use button-dark-blue" type="submit">
                     Применить
                   </button>
                   <button class="button button-reset" type="reset">
@@ -208,12 +208,13 @@
         <section class="select-group">
           <h2 class="select-title main-title">Найдено гостиниц: 38</h2>
           <select class="select-control" aria-label="Сортировка">
+            <!-- как сделать, чтобы стрелка тоже отодвинулась и не прилипала к краю? -->
             <option value="popular">Сначала дешёвые</option>
             <option value="cheap">Сначала дорогие</option>
             <option value="expensive">Сначала популярные</option>
           </select>
           <div class="button-select">
-            <a href="#" class="button grid">
+            <a href="#" class="button button-current grid">
               <span class="visually-hidden">Показать блоками</span>
             </a>
             <a class="button full-page" href="#">
@@ -240,7 +241,7 @@
               </a>
               <p class="card-subtitle">Гостиница<span>От 4000 ₽</span></p>
               <a class="button button-brown card-link" href="#">Подробнее</a>
-              <button class="button button-favorites">В Избранное</button>
+              <button class="button button-favorites button-dark-blue">В Избранное</button>
               <div class="card-rating">
                 <img
                   class="card-stars"
@@ -286,7 +287,7 @@
               </a>
               <p class="card-subtitle">Гостиница<span>От 2500 ₽</span></p>
               <a class="button button-brown card-link" href="#">Подробнее</a>
-              <button class="button button-favorites">В Избранное</button>
+              <button class="button button-favorites button-dark-blue">В Избранное</button>
               <div class="card-rating">
                 <img
                   class="card-stars"
@@ -309,7 +310,7 @@
               </a>
               <p class="card-subtitle">Гостиница<span>От 1500 ₽</span></p>
               <a class="button button-brown card-link" href="#">Подробнее</a>
-              <button class="button button-favorites">В Избранное</button>
+              <button class="button button-favorites button-dark-blue">В Избранное</button>
               <div class="card-rating">
                 <img
                   class="card-stars"
@@ -362,7 +363,7 @@
                 placeholder="Ваш e-mail"
                 required
               />
-              <button class="button dark-blue" type="submit">
+              <button class="button button-dark-blue" type="submit">
                 Подписаться
               </button>
             </label>

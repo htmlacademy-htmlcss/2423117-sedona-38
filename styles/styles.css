@@ -59,7 +59,7 @@ img {
   margin: 0 auto;
 }
 
-.navigation-logo{
+.navigation-logo {
   position: absolute;
 }
 
@@ -83,6 +83,17 @@ img {
   line-height: 24px;
   text-decoration: none;
   text-align: center;
+  position: relative;
+}
+
+.navigation-link-current::before{
+  content: "";
+  height: 2px;
+  position: absolute;
+  background-color: #756257;
+  left: 16px;
+  right: 16px;
+  bottom: 0;
 }
 
 .navigation-user {
@@ -117,7 +128,6 @@ img {
 }
 
 .button {
-  display: inline-block;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -135,6 +145,14 @@ img {
 .button-brown {
   background-color: #756157;
   padding: 8px 34px;
+}
+
+.button-brown:hover{
+  background-color: #615048;
+}
+
+.button-brown:focus{
+  background-color: #615048;
 }
 
 .visually-hidden {
@@ -180,7 +198,6 @@ img {
   font-size: 22px;
   line-height: 26px;
   margin: 0;
-  margin-bottom: 54px;
 }
 
 .main-top {
@@ -207,19 +224,19 @@ img {
   font-size: 24px;
   line-height: 28px;
   margin: 0;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
   position: relative;
 }
 
-.advantages-title::after {
+.advantages-title-line::after {
   content: "";
   display: block;
   width: 60px;
   height: 2px;
-  background-color: #000000;
+  background-color: currentColor;
   opacity: 30%;
   position: absolute;
-  bottom: 0;
+  bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -229,7 +246,7 @@ img {
   font-size: 18px;
   line-height: 21px;
   margin: 0;
-  padding-top: 30px;
+  margin-top: 60px;
 }
 
 .white-text {
@@ -276,7 +293,7 @@ img {
   text-align: center;
 }
 
-.advantages-title-relax{
+.advantages-title-relax {
   text-transform: uppercase;
   font-size: 24px;
   line-height: 28px;
@@ -303,10 +320,15 @@ img {
 }
 
 .search {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
+  text-align: center;
   padding: 96px 304px;
+}
+
+/* не могу кнопку сделать меньше, что нужно написать? */
+.button-search{
+  display: block;
+  padding: 8px 50px;
+  margin-top: 54px;
 }
 
 .subscribe {
@@ -322,6 +344,7 @@ img {
 .subscribe-form {
   display: flex;
   justify-content: center;
+  margin-top: 54px;
 }
 
 .subscribe-form label {
@@ -343,6 +366,18 @@ img {
   border-radius: 0;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
+}
+
+.button-dark-blue{
+  background-color: #82b3d3;
+}
+
+.button-dark-blue:hover{
+  background-color: #68A2CA;
+}
+
+.button-dark-blue:focus{
+  background-color: #68A2CA;
 }
 
 .page-footer {
@@ -368,6 +403,11 @@ img {
   padding: 10px;
 }
 
+/* тоже не поняла как правильно применяtтся hover */
+.button-social:hover{
+  fill: #68A2CA;
+}
+
 .footer-contacts-address {
   font-style: normal;
 }
@@ -381,6 +421,20 @@ img {
   line-height: 40px;
 }
 
+.footer-contacts-address-phone:hover{
+  color: #756157;
+}
+
+.footer-contacts-address-phone:focus{
+  color: #756157;
+}
+
+.footer-contacts-address-phone:active{
+  color: #756157;
+  opacity: 30%;
+}
+/* как правильно сделать hover на ссылку html academy? */
+
 /* стилизация каталога */
 
 .main-inner-image {
@@ -391,20 +445,6 @@ img {
 
 .main-inner-container {
   padding: 35px 70px 70px;
-}
-
-.home-icon {
-  background-image: url(../images/home-icon.svg);
-  background-repeat: no-repeat;
-}
-
-.home-icon::after {
-  content: "";
-  display: inline-block;
-  width: 6px;
-  height: 10px;
-  background-image: url(../images/arrow-icon.svg);
-  background-repeat: no-repeat;
 }
 
 .inner-header-title {
@@ -427,15 +467,28 @@ img {
   display: inline-block;
   width: 48px;
   height: 48px;
-  border: 2px solid #000000;
+  border: 2px solid #E5E5E5;
   padding: 14px 12px;
   background-position: center;
+}
+
+.select-group .button:hover{
+  border: 2px solid #000000;
+}
+
+.button-current{
+  border: 2px solid #000000;
 }
 
 .select-control {
   width: 292px;
   padding: 14px 20px;
   margin-left: 200px;
+  border: 2px solid #E5E5E5;
+}
+
+.select-control:hover{
+  border: 2px solid #000000;
 }
 
 .select-title {
@@ -454,6 +507,30 @@ img {
   list-style-type: none;
 }
 
+.breadcrumbs-link-current:hover{
+  color: #ffffff;
+  opacity: 60%;
+}
+
+.breadcrumbs-link-current:active{
+  color: #ffffff;
+  opacity: 30%;
+}
+
+.home-icon {
+  background-image: url(../images/home-icon.svg);
+  background-repeat: no-repeat;
+}
+
+.home-icon::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 10px;
+  background-image: url(../images/arrow-icon.svg);
+  background-repeat: no-repeat;
+}
+
 .catalog-filter {
   display: flex;
   justify-content: space-between;
@@ -470,18 +547,22 @@ img {
   line-height: 24px;
 }
 
+.button-reset{
+  background-color: transparent;
+}
+
 .grid {
-  background-image: url(../images/grid-icon.svg);
+  background-image: url(../images/view-table.svg);
   background-repeat: no-repeat;
 }
 
 .full-page {
-  background-image: url(../images/full-page-icon.svg);
+  background-image: url(../images/view-slideshow.svg);
   background-repeat: no-repeat;
 }
 
 .row {
-  background-image: url(../images/row-icon.svg);
+  background-image: url(../images/view-row.svg);
   background-repeat: no-repeat;
 }
 
@@ -499,13 +580,17 @@ img {
 }
 
 .card-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
   padding: 20px;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
   margin: 0;
 }
 
-.card-image{
+.card-image {
   margin-bottom: 16px;
 }
 
@@ -524,6 +609,7 @@ img {
   color: #333333;
   margin: 0;
   margin-bottom: 16px;
+  width: 100%;
 }
 
 .card-rating-subtitle {
@@ -531,30 +617,35 @@ img {
   border-radius: 4px;
   padding: 9px 22px 8px 23px;
   margin: 0;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   color: #333333;
 }
 
-.card-rating{
+.card-rating {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
-.card-link{
+.card-link {
   padding: 8px 26px;
   margin-right: 14px;
 }
 
-.button-favorites{
+.button-favorites {
   font-family: inherit;
-  background-color: #82B3D3;
+  background-color: #82b3d3;
   padding: 8px 20px;
   margin-bottom: 16px;
 }
 
-.green{
-  background-color: #7DB54F;
+.green {
+  background-color: #7db54f;
   padding: 8px 18px;
+}
+
+.green:hover{
+  background-color: #6C9E42;
 }
 
 .pagination {
@@ -589,13 +680,30 @@ img {
   background-color: #82b3d3;
 }
 
+.pagination-link:hover, .pagination-link:focus{
+  background-color: #68A2CA;
+}
+
+.pagination-link:active{
+  color: #ffffff;
+  opacity: 30%;
+}
+
 .pagination-current {
   color: #000000;
   background-color: #f2f2f2;
 }
 
+.pagination-current:hover, .pagination-current:focus{
+  background-color: #f2f2f2;
+}
+
 .pagination-more {
   color: #000000;
+  background-color: #ffffff;
+}
+
+.pagination-more:hover, .pagination-more:focus{
   background-color: #ffffff;
 }
 
