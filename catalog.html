@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="page-container">
-      <header class="page-header">
+      <header class="page-header" data-test="header">
         <!-- разметка левой части навигации в шапке -->
         <nav class="navigation">
           <a class="navigation-logo" href="index.html"
@@ -71,7 +71,7 @@
         </nav>
       </header>
 
-      <main class="main-inner">
+      <main class="main-inner" data-test="main">
         <!-- разметка шапки в каталоге -->
         <div class="main-inner-image">
           <div class="main-inner-container">
@@ -90,7 +90,7 @@
               </ul>
             </header>
             <!-- разметка фильтра -->
-            <section class="catalog-selection">
+            <section class="catalog-selection filter" data-test="filter">
               <h2 class="visually-hidden">
                 Список выбора гостиниц с фильтрами
               </h2>
@@ -141,7 +141,7 @@
                 </fieldset>
 
                 <fieldset class="catalog-filter-group">
-                  <legend class="catalog-filter-title">Тип жилья:</legend>
+                  <legend class="catalog-filter-title">Тип Жилья:</legend>
                   <ul class="catalog-filter-list">
                     <li class="catalog-filter-item">
                       <label class="control">
@@ -176,7 +176,7 @@
                           name="home-group"
                           value="Аппартаменты"/>
                           <span class="control-mark radio"></span>
-                        <span class="control-label">Аппартаменты</span>
+                        <span class="control-label">Апартаменты</span>
                       </label>
                     </li>
                   </ul>
@@ -212,7 +212,7 @@
                   </ul>
                   <div class="range">
                     <div class="range-scale">
-                      <div class="range-bar" style="left: 0; width: 206px">
+                      <div class="range-bar" style="left: 0; width: 227px">
                         <button class="range-toggle toggle-min" type="button">
                           <span class="visually-hidden">Изменить минимальную цену</span>
                         </button>
@@ -221,6 +221,7 @@
                         </button>
                       </div>
                     </div>
+                  </div>
                 </fieldset>
                 <div class="button-submit">
                   <button class="button button-use button-dark-blue" type="submit">Применить</button>
@@ -231,7 +232,7 @@
           </div>
         </div>
         <!-- разметка секции найдено: -->
-        <section class="select-group">
+        <section class="select-group catalog" data-test="catalog">
           <h2 class="select-title main-title">Найдено гостиниц: 38</h2>
           <select class="select-control" aria-label="Сортировка">
             <option value="popular">Сначала дешёвые</option>
@@ -264,7 +265,7 @@
                 />
                 <h3 class="card-title">Amara Resort & Spa</h3>
               </a>
-              <p class="card-subtitle">Гостиница<span>От 4000 ₽</span></p>
+              <p class="card-subtitle"><span class="hotel-subtitle">Гостиница</span><span>От 4000 ₽</span></p>
               <a class="button button-brown card-link" href="#">Подробнее</a>
               <button class="button button-favorites button-dark-blue" type="button">В Избранное</button>
               <div class="card-rating">
@@ -287,7 +288,7 @@
                 />
                 <h3 class="card-title">Villas at Poco Diablo</h3>
               </a>
-              <p class="card-subtitle">Гостиница<span>От 5000 ₽</span></p>
+              <p class="card-subtitle"><span class="hotel-subtitle">Гостиница</span><span>От 5000 ₽</span></p>
               <a class="button button-brown card-link" href="#">Подробнее</a>
               <a class="button button-favorites green">В избранном</a>
               <div class="card-rating">
@@ -310,7 +311,7 @@
                 />
                 <h3 class="card-title">Desert Quail Inn</h3>
               </a>
-              <p class="card-subtitle">Гостиница<span>От 2500 ₽</span></p>
+              <p class="card-subtitle"><span class="hotel-subtitle">Гостиница</span><span>От 2500 ₽</span></p>
               <a class="button button-brown card-link" href="#">Подробнее</a>
               <button class="button button-favorites button-dark-blue" type="button">В Избранное</button>
               <div class="card-rating">
@@ -333,7 +334,7 @@
                 />
                 <h3 class="card-title">GreenTree Inn</h3>
               </a>
-              <p class="card-subtitle">Гостиница<span>От 1500 ₽</span></p>
+              <p class="card-subtitle"><span class="hotel-subtitle">Гостиница</span><span>От 1500 ₽</span></p>
               <a class="button button-brown card-link" href="#">Подробнее</a>
               <button class="button button-favorites button-dark-blue" type="button">В Избранное</button>
               <div class="card-rating">
@@ -371,10 +372,10 @@
           </ul>
         </section>
 
-        <section class="subscribe-inner">
+        <section class="subscribe-inner" data-test="subscribe">
           <h2 class="main-title">Подпишитесь на рассылку</h2>
           <p class="main-subtitle">
-            Только полезная информация и никакого спама, честное бойскаутское!
+            Только полезная информация и никакого спама, <br>честное бойскаутское!
           </p>
           <form
             class="subscribe-form"
@@ -389,15 +390,15 @@
                 name="email"
                 required
               />
-              <button class="button button-dark-blue" type="submit">
-                Подписаться
-              </button>
             </label>
+            <button class="button button-dark-blue" type="submit">
+              Подписаться
+            </button>
           </form>
         </section>
       </main>
 
-      <footer class="page-footer">
+      <footer class="page-footer" data-test="footer">
         <section class="footer-social">
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="footer-social-list">
