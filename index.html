@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="page-container">
-      <header class="page-header">
+      <header class="page-header" data-test="header">
         <!-- разметка левой части навигации в шапке -->
         <nav class="navigation">
           <a class="navigation-logo" href="#"
@@ -73,9 +73,9 @@
         </nav>
       </header>
 
-      <main class="main-index">
+      <main class="main-index" data-test="main">
         <!-- разметка картинки "Добро пожаловать в Седону" -->
-        <section class="main-welcome">
+        <section class="main-welcome" data-test="hero">
           <h1 class="visually-hidden">Седона</h1>
           <img
             class="welcome"
@@ -86,7 +86,7 @@
           />
         </section>
         <!-- разметка преимуществ годода Седона-->
-        <section class="advantages">
+        <section class="advantages" data-test="advantages">
           <div class="main-top">
             <h2 class="main-title title">
               Седона — небольшой городок в Аризоне, заслуживающий большего!
@@ -166,7 +166,7 @@
           </ul>
         </section>
         <!-- разметка преимуществ отдыха в городке-->
-        <section class="advantages">
+        <section class="advantages service" data-test="service">
           <div class="main-bottom">
             <h2 class="main-title">
               Приезжайте в Седону отдохнуть в комфорте и уюте!
@@ -201,7 +201,7 @@
           </ul>
         </section>
         <!-- разметка секции Заинтересовались -->
-        <section class="search">
+        <section class="search" data-test="search">
           <h2 class="main-title">Заинтересовались?</h2>
           <p class="main-subtitle">
             Укажите предполагаемые даты поездки, <br />и мы покажем вам лучшие
@@ -241,7 +241,7 @@
         </section>
       </main>
 
-      <footer class="page-footer">
+      <footer class="page-footer" data-test="footer">
         <section class="footer-social">
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="footer-social-list">
@@ -327,7 +327,7 @@
       </footer>
 
       <!-- модальное окно -->
-      <div class="modal-container modal-container-close">
+      <div class="modal-container modal-container-close" data-test="modal">
         <div class="modal modal-search">
           <button class="modal-close-button" type="button">
             <span class="visually-hidden">Закрыть</span>
