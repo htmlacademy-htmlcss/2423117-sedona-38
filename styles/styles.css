@@ -210,7 +210,7 @@ img {
 
 .main-welcome {
   color: #000000;
-  background-color: #83b3d31f;
+  background-color: #68A2CA;
   background-image: url(../images/border-bottom.svg),
     url(../images/background.jpg);
   min-height: 485px;
@@ -270,6 +270,7 @@ img {
   width: 400px;
   text-align: center;
   min-height: 385px;
+  height: 100%;
 }
 
 .advantages-title {
@@ -308,6 +309,8 @@ img {
 
 .image-city {
   display: block;
+  object-fit: cover;
+  height: 100%;
 }
 
 .dark-blue {
@@ -398,7 +401,7 @@ img {
   background-image: url(../images/subscribe.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #83b3d31f;
+  background-color: #68A2CA;
 }
 
 .subscribe-form {
@@ -565,6 +568,7 @@ img {
   background-image: url(../images/filter-photo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #68A2CA;
 }
 
 .main-inner-container {
@@ -774,13 +778,11 @@ img {
   opacity: 0.8;
 }
 
-.control:focus .control-mark,
-.control:focus .control-label {
+.control-input:focus ~ .control-mark {
   outline: 3px solid #68a2ca;
 }
 
-.control:active .control-mark,
-.control:active .control-label {
+.control-input:active ~ .control-mark {
   opacity: 0.3;
 }
 
@@ -1389,6 +1391,10 @@ img {
   color: #68a2ca;
 }
 
+.button-tooltip:hover + .tooltip-text{
+  display: block;
+}
+
 .tooltip-text {
   position: absolute;
   top: 25px;
@@ -1405,6 +1411,7 @@ img {
   font-family: inherit;
   font-weight: 400;
   line-height: 20px;
+  display: none;
 }
 
 .tooltip-text::before {
